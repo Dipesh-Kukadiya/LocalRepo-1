@@ -1,6 +1,15 @@
 #include <stdio.h>
 int main(){
-    int a=20;
-    printf("a is a=%d\n",a);
+    FILE *fptr;
+    fptr=fopen("Test.txt","r");
+    int ch;
+    fscanf(fptr,"%d",&ch);
+    printf("Character is=%d\n",ch);
+    fscanf(fptr,"%d",&ch);
+    printf("Character is=%d\n",ch);
+        fscanf(fptr,"%d",&ch);
+    printf("Character is=%d\n",ch);
+  
+    fclose(fptr);
     return 0;
 }
