@@ -2,14 +2,13 @@
 int main(){
     FILE *fptr;
     fptr=fopen("Test.txt","r");
-    int ch;
-    fscanf(fptr,"%d",&ch);
-    printf("Character is=%d\n",ch);
-    fscanf(fptr,"%d",&ch);
-    printf("Character is=%d\n",ch);
-        fscanf(fptr,"%d",&ch);
-    printf("Character is=%d\n",ch);
-  
+    char ch;
+    ch=fgetc(fptr);
+    while (ch != EOF){
+        printf("%c",ch);
+        ch=fgetc(fptr);
+    }
+    printf("\n");
     fclose(fptr);
     return 0;
 }
